@@ -3,21 +3,24 @@ using namespace std;
 int main()
 {
 int x;
-while (x--)
+while (cin>>x)
 {
-cin>>x; 
+ 
+ if(x==0)
+     {
+        break;
+     }
  for (int i = 1; i <= x; i++)
  {
-     cout<<i<<" "; 
+
+    if(i>1)
+    {
+        cout<<" "; 
+    }
+    cout<<i; 
  }
- cout<<endl; 
- 
+  cout<<endl; 
 }
-
-
-
-
-
 
 return 0;
 }
