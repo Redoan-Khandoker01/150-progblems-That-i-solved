@@ -2,15 +2,22 @@
 using namespace std;
 int main()
 {
-int x;
-cin>>x; 
+int n; 
+cin>>n;
 
-for (int i = 8; i < 20; i++)
+if(n%2==0)
 {
-    if(i%2==1)
-    {
-        cout<<i<<endl; 
-    }
+    n++; 
+}
+for (int i =0; i <6; i++)
+{
+   if(n%2==1)
+   {
+    cout<<n<<endl;  
+    n+=2; 
+
+   }
+ 
 }
 
 
