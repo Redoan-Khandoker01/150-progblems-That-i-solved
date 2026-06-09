@@ -4,33 +4,26 @@ int main()
 {
 int n; 
 cin>>n; 
-vector<int> v(n); 
-
-for (int i = 0; i <n; i++)
+while (n--)
 {
-    cin>>v[i]; 
+    int x; 
+    cin>>x; 
+   if(x<0 && x%2 !=0)
+   {
+    cout<<"ODD NEGATIVE"<<endl; 
+   }
+   else if( x==0)
+        {cout<<"NULL"<<endl; }
+    else if(x>0 && x%2 !=0)
+        {cout<<"ODD POSITIVE"<<endl;}
+    else if(x<0 && x%2==0)
+       { cout<<"EVEN NEGATIVE"<<endl;}
+    else if(x>0 && x%2==0) 
+        {cout<<"EVEN POSITIVE"<<endl;} 
+ 
+
 }
 
-for (int i = 0; i <v[n]; i++)
-{
-    if(v[i]%2!=0 && v[i]<0 )
-    {
-        cout<<"ODD NEGATIVE"<<endl;
-    }
-    else if(v[i]<0 && v[i]%2==0 )
-    {
-        cout<<"EVEN NEGATIVE"<<endl; 
-    }
-    else if(v[i]==0)
-    {
-        cout<<"NULL"<<endl;
-    }
-    else if(v[i]%2!=0 && v[i]>0  )
-    {
-        cout<<"ODD POSITIVE"<<endl;
-    }
-
-}
 
 
 
