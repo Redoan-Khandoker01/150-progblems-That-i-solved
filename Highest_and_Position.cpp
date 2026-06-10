@@ -7,9 +7,14 @@ int x;
 while (cin>>x)
 {
     v.push_back(x);/* code */
+
 }
-int mx = *max_element(v.begin(),v.end());
-cout<<mx<<endl<<v[mx]; 
+
+auto it = max_element(v.begin(),v.end()); 
+cout<<*it<<endl; 
+cout<<(it-v.begin()+1)<<endl; 
+
+
 
 
 
