@@ -2,19 +2,18 @@
 using namespace std;
 int main()
 {
-int n;
-cin>>n; 
+    int x; 
+    cin>>x; 
 int arr[10]; 
-int sum=0; 
-for (int i = 0; i <10; i++)
+arr[0]=x;
+for (int i = 1; i <=10; i++)
 {
-    
-    
-         arr[i]=n;
-         n++; n=n*n;
-    cout<<"N["<<i<<"]"<<" = "<<arr[i]<<endl; 
-         
-   
+    arr[i]= arr[i-1]*2;
+}
+
+for (int i = 0; i < 10; i++)
+{
+    cout<<"N"<<"["<<i<<"]"<<" = "<<arr[i]<<endl; 
 }
 
 
