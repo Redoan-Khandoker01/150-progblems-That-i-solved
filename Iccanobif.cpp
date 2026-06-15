@@ -2,29 +2,33 @@
 using namespace std;
 
 int main() {
+    int n;
+    cin >> n;
 
-    int n; 
-    cin>>n; 
+    vector<long long> fib;
 
-    long long a=0,b=1;
-    long long fibonacci=0; 
-    
-    for (int i = 0; i < n; i++)
-    {
-        if(i==0)
-        {
-            cout<<a;
-        }
-        else if(i==1)
-            cout<<" "<<b; 
+    long long a = 1, b = 1;
 
-        else{
-            fibonacci = a+b;
-            cout<<" "<<fibonacci;
-            a=b; 
-            b= fibonacci; 
+    fib.push_back(1);
 
-        }
+    if (n > 1)
+        fib.push_back(1);
+
+    for (int i = 3; i <= n; i++) {
+        long long c = a + b;
+        fib.push_back(c);
+        a = b;
+        b = c;
     }
-    
-    cout<<endl; 
+
+    reverse(fib.begin(), fib.end());
+
+    for (int i = 0; i < n; i++) {
+        if (i) cout << " ";
+        cout << fib[i];
+    }
+
+    cout << '\n';
+
+    return 0;
+}
